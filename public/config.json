@@ -19,7 +19,7 @@
         }
       ],
       "outArguments": [],
-      "url": "https://onrender.com",
+      "url": "https://sfmc-custom-activity-i6x2.onrender.com",
       "verb": "POST",
       "body": "",
       "header": "",
@@ -30,15 +30,15 @@
   },
   "configurationArguments": {
     "save": {
-      "url": "https://onrender.com",
+      "url": "https://sfmc-custom-activity-i6x2.onrender.com",
       "verb": "POST"
     },
     "validate": {
-      "url": "https://onrender.com",
+      "url": "https://sfmc-custom-activity-i6x2.onrender.com",
       "verb": "POST"
     },
     "publish": {
-      "url": "https://onrender.com",
+      "url": "https://sfmc-custom-activity-i6x2.onrender.com",
       "verb": "POST"
     }
   },
