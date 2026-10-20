@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Activity Configuration</title>
+    <!-- Include the official Postmonger SDK via Salesforce CDN -->
+    <script src="https://salesforce.com"></script>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f6f9; }
+        h3 { color: #0176d3; }
+        .box { background: white; padding: 15px; border-radius: 4px; border: 1px solid #dddbda; }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h3>Custom Activity</h3>
+        <p>The interface loaded successfully from the Render server!</p>
+        <p>Click <strong>Done</strong> or <strong>Next</strong> on the bottom panel to save this activity in the journey.</p>
+    </div>
+
+    <script>
+        // Initialize the two-way messaging connection with Journey Builder
+        var connection = new Postmonger.Session();
+
+        // Triggered when the Journey Builder canvas initializes the iframe modal
+        connection.on('initActivity', function(data) {
+            console.log('Activity initialized in canvas', data);
+        });
+
+        // Triggered when the user clicks the footer "Done" or "Next" button in Journey Builder
+        connection.on('clickedNext', function() {
+            var payload = {};
+            
+            // Notify Journey Builder that configurations are successfully set and saved
+            connection.trigger('updateActivity', payload);
+        });
+    </script>
+</body>
+</html>
