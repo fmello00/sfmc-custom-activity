@@ -1,0 +1,58 @@
+{
+  "workflowApiVersion": "1.1",
+  "metaData": {
+    "icon": "icon.png",
+    "category": "message"
+  },
+  "type": "REST",
+  "lang": {
+    "en-US": {
+      "name": "Custom Test Activity",
+      "description": "Custom Activity hosted on Render for testing purposes."
+    }
+  },
+  "arguments": {
+    "execute": {
+      "inArguments": [
+        {
+          "emailAddress": "{{Contact.Attribute.EmailAddress}}"
+        }
+      ],
+      "outArguments": [],
+      "url": "https://onrender.com",
+      "verb": "POST",
+      "body": "",
+      "header": "",
+      "format": "json",
+      "useJwt": false,
+      "timeout": 10000
+    }
+  },
+  "configurationArguments": {
+    "save": {
+      "url": "https://onrender.com",
+      "verb": "POST"
+    },
+    "validate": {
+      "url": "https://onrender.com",
+      "verb": "POST"
+    },
+    "publish": {
+      "url": "https://onrender.com",
+      "verb": "POST"
+    }
+  },
+  "wizardSteps": [
+    {
+      "key": "step1",
+      "label": "Initial Configuration"
+    }
+  ],
+  "userInterfaces": {
+    "configModal": {
+      "height": 400,
+      "width": 600,
+      "fullscreen": false
+    }
+  }
+}
