@@ -7,8 +7,8 @@
   "type": "REST",
   "lang": {
     "en-US": {
-      "name": "Custom Test Activity",
-      "description": "Custom Activity hosted on Render for testing purposes."
+      "name": "Twilio Custom Activity",
+      "description": "Custom Activity with Twilio tracking integration."
     }
   },
   "arguments": {
@@ -21,7 +21,8 @@
           "phoneNumber": "{{Contact.Default.PhoneNumber}}"
         }
       ],
-      "url": "https://sfmc-custom-activity-i6x2.onrender.com",
+      "outArguments": [],
+      "url": "https://sfmc-custom-activity-i6x2.onrender.com/execute",
       "verb": "POST",
       "body": "",
       "header": "",
@@ -32,15 +33,15 @@
   },
   "configurationArguments": {
     "save": {
-      "url": "https://sfmc-custom-activity-i6x2.onrender.com",
+      "url": "https://sfmc-custom-activity-i6x2.onrender.com/save",
       "verb": "POST"
     },
     "validate": {
-      "url": "https://sfmc-custom-activity-i6x2.onrender.com",
+      "url": "https://sfmc-custom-activity-i6x2.onrender.com/validade",
       "verb": "POST"
     },
     "publish": {
-      "url": "https://sfmc-custom-activity-i6x2.onrender.com",
+      "url": "https://sfmc-custom-activity-i6x2.onrender.com/publish",
       "verb": "POST"
     }
   },
