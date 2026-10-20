@@ -16,9 +16,11 @@
       "inArguments": [
         {
           "emailAddress": "{{Contact.Attribute.EmailAddress}}"
+        },
+        {
+          "phoneNumber": "{{Contact.Default.PhoneNumber}}"
         }
       ],
-      "outArguments": [],
       "url": "https://sfmc-custom-activity-i6x2.onrender.com",
       "verb": "POST",
       "body": "",
